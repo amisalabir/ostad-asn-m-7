@@ -11,4 +11,17 @@ class UserController extends Controller
         return "Hello, $name !";
 
     }
+   function login($email="",$password="")
+    {
+        $userEmail = "username@domain.com";
+        $userPassword = "UserPassword";
+        if($email == $userEmail &&  $password == $userPassword)
+        {
+            return "Login successful !";
+        }
+        else
+        {
+            return "'Invalid credentials !";
+        }
+    }
 }

@@ -2,8 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
+
+
 
 Route::get('/greet/{name?}',[UserController::class,'greet']);
+Route::get('/login/{email?}/{password?}',[UserController::class,'login']);
+Route::get('/about/{name?}',[AboutController::class,'index']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +19,8 @@ Route::get('/greet/{name?}',[UserController::class,'greet']);
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
